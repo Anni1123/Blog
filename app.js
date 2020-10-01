@@ -122,6 +122,7 @@ app.get('/home', (req, res) => {
     if(!req.isAuthenticated()){
         res.redirect('/');
     }
+    //Checking Authentication
     else{
         // clog(req.user);
         Blog.find({}, (err, blogs) => {
